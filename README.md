@@ -22,7 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 ## usersテーブル
 
 |Column|Type|Options|
@@ -49,6 +52,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|position|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 

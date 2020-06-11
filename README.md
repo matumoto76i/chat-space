@@ -22,10 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 ## usersテーブル
 
 |Column|Type|Options|

@@ -9,6 +9,25 @@
       = link_to "#" ,class:"edit-btn" do
         Edit
   .chat_main__messages_list
-    ＜メッセージリスト＞
-  .chat_main__message_form
-    ＜メッセージフォーム＞
+    .chat_main__message_nametime
+      .chat_main__message_name
+        namae
+      .chat_main__message_time
+        タイムスタンプ
+    .chat_main__message_coment
+      ＜コメント＞
+    .chat_main__message_nametime
+      .chat_main__message_name
+        namae
+      .chat_main__message_time
+        2020/06/17(Wed) 21:50:40
+    .chat_main__message_coment
+      ＜コメント＞
+  .chat_main__message_footer
+    = form_tag root_path do
+      .chat_main__message_form
+        %input{type: "text", class: "message_text", placeholder: "type a message"}
+        %label{class: "chat_main__image"}
+          = icon('fas', 'image')
+          %input{type: "file"}
+      %input{type: "submit", class: "send_btn", value: "Send"}

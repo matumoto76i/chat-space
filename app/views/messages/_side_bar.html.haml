@@ -10,7 +10,12 @@
           <i class='fa fa-cog'></i>
   .side_bar__group_list
     .side_bar__group_index
-      = link_to "#" ,class:"group_sname" do
+      = link_to messages_index_path, class:"group_sname" do
         グループ名
       = link_to "#" ,class:"group_message" do
-        グループメッセージ
+        まだメッセージはありません
+    .side_bar__group_index
+      = link_to messages_index_path, class:"group_sname" do
+        グループ名
+      = link_to "#" ,class:"group_message" do
+        まだメッセージはありません

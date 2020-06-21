@@ -5,15 +5,10 @@
         namae
       .side_bar__user-icons
         = link_to "#" ,class:"left-icon" do
-          <i class='far fa-edit'></i>
+          = icon('far', 'edit')
         = link_to "#" ,class:"right-icon" do
-          <i class='fa fa-cog'></i>
+          = icon('fa', 'cog')
   .side_bar__group_list
-    .side_bar__group_index
-      = link_to messages_index_path, class:"group_sname" do
-        グループ名
-      = link_to "#" ,class:"group_message" do
-        まだメッセージはありません
     .side_bar__group_index
       = link_to messages_index_path, class:"group_sname" do
         グループ名

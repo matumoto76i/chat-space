@@ -25,9 +25,10 @@
       ＜コメント＞
   .chat_main__message_footer
     = form_tag root_path do
-      .chat_main__message_form
-        %input{type: "text", class: "message_text", placeholder: "type a message"}
-        %label{class: "chat_main__image"}
-          = icon('fas', 'image')
-          %input{type: "file"}
-      %input{type: "submit", class: "send_btn", value: "Send"}
+      .chat_main__message_box
+        .chat_main__message_form
+          %input{type: "text", class: "message_text", placeholder: "type a message"}
+          %label{class: "chat_main__image"}
+            = icon('fas', 'image')
+            %input{type: "file"}
+        %input{type: "submit", class: "send_btn", value: "Send"}

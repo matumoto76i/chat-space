@@ -154,6 +154,12 @@
     align-items: center;
     padding: 10px 40px;
   }
+  &__message_box{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: calc(100vw - 300px - 80px);
+  }
   &__message_form{
     background-color: #ffffff;
     height: 50px;
@@ -193,8 +199,5 @@
     color: #ffffff;
     height: 50px;
     width: 100px;
-    position: absolute;
-    right: 40px;
-    bottom: 20px;
   }
 }

@@ -2,26 +2,22 @@
   .chat_main__group_header
     .chat_main__group_info
       .chat_main__group_hname
-        test
+        = @group.name
       .chat_main__group_member
-        Member : 
+        Member :
+        - @group.users.each do |user|
+          = user.name
     .chat_main__group_edit
-      = link_to "#" ,class:"edit-btn" do
+      = link_to edit_group_path(@group.id), class:"edit-btn" do
         Edit
-  .chat_main__messages_list
-    .chat_main__message_nametime
-      .chat_main__message_name
-        namae
-      .chat_main__message_time
-        タイムスタンプ
-    .chat_main__message_coment
-      ＜コメント＞
+  .chat_main__message_list
+    = render @messages
   .chat_main__message_footer
-    = form_tag root_path do
+    = form_for [@group, @message] do |f|
       .chat_main__message_box
+        = f.text_field :content, class: 'message_text', placeholder: 'type a message'
         .chat_main__message_form
-          %input{type: "text", class: "message_text", placeholder: "type a message"}
-          %label{class: "chat_main__image"}
-            = icon('fas', 'image')
-            %input{type: "file"}
-        %input{type: "submit", class: "send_btn", value: "Send"}
+          = f.label :image, class: 'chat_main__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'send_btn'

@@ -1,10 +1,10 @@
-.message-info
+.message{data: {message: {id: message.id}}}
   .chat_main__message_nametime
     .chat_main__message_user-name
       = message.user.name
     .chat_main__message_time
       = message.created_at.to_s(:datetime)
-  .chat_main__message_coment
+  .chat_main__message_comment
     - if message.content.present?
       %p.lower-message__content
         = message.content

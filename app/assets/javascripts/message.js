@@ -1,8 +1,8 @@
 $(function() {
     function buildHTML(message){
       if ( message.image ) {
-        var html =
-          `<div class="message" data-message-id=${message.id}>
+        var html = `
+          <div class="message" data-message-id=${message.id}>
             <div class="chat_main__message_nametime">
               <div class="chat_main__message_user-name">
                 ${message.user_name}
